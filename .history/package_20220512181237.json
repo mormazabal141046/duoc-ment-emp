@@ -6,7 +6,8 @@
   "author": "mormazabal1046 <mormazabal@entelocean.io>",
   "private": true,
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "start": "quasar build"
   },
   "dependencies": {
     "axios": "^0.21.1",
