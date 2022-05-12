@@ -1,0 +1,35 @@
+<template>
+  <div class="row bg-secondary flex justify-center items-center content-center fullscreen">
+    <div class="bg-primary col-6 flex column justify-center items-center content-center q-pa-xl bordered">
+      <img src="img/icon_login.png" alt="" style="width:150px;">
+      <h3 class="text-white">Login</h3>
+      <q-input class="flex q-mb-lg" style="min-width: 350px;" v-model="email" filled type="email" hint="Usuario" />
+      <q-input class="flex q-mb-lg" style="min-width: 350px;" v-model="password" filled :type="isPwd ? 'password' : 'text'" hint="Contraseña">
+        <template v-slot:append>
+          <q-icon
+            :name="isPwd ? 'visibility_off' : 'visibility'"
+            class="cursor-pointer"
+            @click="isPwd = !isPwd"
+          />
+        </template>
+      </q-input>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name:"Login",
+  data(){
+    return{
+      password: '',
+      isPwd: true,
+      email: '',
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
