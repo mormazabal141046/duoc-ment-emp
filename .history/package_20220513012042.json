@@ -6,7 +6,8 @@
   "author": "mormazabal1046 <mormazabal@entelocean.io>",
   "private": true,
   "scripts": {
-    "start": "node server.js",
+    "build": "npx quasar build -m ssr",
+    "start": "cd dist/ssr; npm i; npm start",
     "heroku-postbuild": "yarn && yarn build"
   },
   "dependencies": {
