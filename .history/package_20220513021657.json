@@ -6,9 +6,8 @@
   "author": "mormazabal1046 <mormazabal@entelocean.io>",
   "private": true,
   "scripts": {
-    "build": "quasar build",
-    "start": "node server.js",
-    "heroku-postbuild": "npm install && npm run build"
+    "build": "npx quasar build -m ssr",
+    "start": "node server.js"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
@@ -17,11 +16,13 @@
     "core-js": "^3.6.5",
     "express": "^4.18.1",
     "quasar": "^1.0.0",
-    "serve-static": "^1.15.0",
-    "vue-loader": "^17.0.0"
+    "serve-static": "^1.15.0"
   },
   "devDependencies": {
-    "@quasar/app": "^2.0.0"
+    "@quasar/app": "^2.0.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
   },
   "browserslist": [
     "last 10 Chrome versions",
