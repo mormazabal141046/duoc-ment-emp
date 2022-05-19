@@ -1,0 +1,38 @@
+<template>
+  <div class="q-pa-md">
+    <div class="col-12 flex justify-between items-center content-center q-mb-md">
+      <div class="text-h5">Recordatorios</div>
+      <q-btn unelevated rounded color="primary" label="Nueva Consulta" @click="persistent = true" />
+    </div>
+    <div>
+      <q-input v-model="search" type="search" hint="Buscar pacientes" rounded outlined dense full-width>
+        <template v-slot:append>
+          <q-icon name="search" />
+        </template>
+      </q-input>
+    </div>
+    <div class="col-12 flex justify-start items-center content-center q-mb-md q-mt-xl">
+      <div class="text-h5">Vistos recientemente</div>
+    </div>
+    <div class="col-12 row flex justify-around no-wrap">
+
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name:"Recordatorio",
+  data(){
+    return{
+      search:"",
+      persistent:false,
+
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>

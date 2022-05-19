@@ -12,17 +12,22 @@ const routes = [
   },
   {
     path: '/user',
-    redirect: '/miprograma',
+    redirect: '/pacientes',
     component: () => import('layouts/MainLayoutUser.vue'),
     children: [
-      { path: '/miprograma', component: () => import('pages/Programa.vue') },
-      { path: '/recordatorios', component: () => import('pages/Recordatorio.vue') },
+      { path: '/miprograma', component: () => import('pages/Pacientes.vue') },
     ]
   },
   {
     path: '/login',
     component: () => import('pages/Login.vue'),
+    // children: [
+    //   { path: '', component: () => import('pages/Index.vue') }
+    // ]
   },
+
+  // Always leave this as last one,
+  // but you can also remove it
   {
     path: '*',
     component: () => import('pages/Error404.vue')
